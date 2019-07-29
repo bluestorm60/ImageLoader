@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImagesLoader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LTf-as-aAm">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewLayout key="collectionViewLayout" id="8mU-QL-0lI" customClass="PinboardCustomLayout" customModule="ImagesLoader" customModuleProvider="target"/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PinBoardCustomCollectionViewCell" id="HkW-hY-5Zw" customClass="PinBoardCustomCollectionViewCell" customModule="ImagesLoader" customModuleProvider="target">
+                                        <rect key="frame" x="90" y="0.0" width="234" height="247"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="234" height="247"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GhG-PD-zSZ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="234" height="247"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ynr-u1-nmJ" customClass="CustomImageViewLoader" customModule="ImagesLoader" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="234" height="247"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="ynr-u1-nmJ" secondAttribute="trailing" id="BI8-89-OvI"/>
+                                                        <constraint firstAttribute="bottom" secondItem="ynr-u1-nmJ" secondAttribute="bottom" id="fw1-ok-ggb"/>
+                                                        <constraint firstItem="ynr-u1-nmJ" firstAttribute="top" secondItem="GhG-PD-zSZ" secondAttribute="top" id="gGK-mN-QIk"/>
+                                                        <constraint firstItem="ynr-u1-nmJ" firstAttribute="leading" secondItem="GhG-PD-zSZ" secondAttribute="leading" id="oAD-O4-V2V"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="GhG-PD-zSZ" secondAttribute="trailing" id="arV-Wn-S7H"/>
+                                            <constraint firstItem="GhG-PD-zSZ" firstAttribute="top" secondItem="HkW-hY-5Zw" secondAttribute="top" id="rg3-Cf-ypN"/>
+                                            <constraint firstAttribute="bottom" secondItem="GhG-PD-zSZ" secondAttribute="bottom" id="sed-df-MFy"/>
+                                            <constraint firstItem="GhG-PD-zSZ" firstAttribute="leading" secondItem="HkW-hY-5Zw" secondAttribute="leading" id="zUS-tL-shV"/>
+                                        </constraints>
+                                        <size key="customSize" width="234" height="247"/>
+                                        <connections>
+                                            <outlet property="containerView" destination="GhG-PD-zSZ" id="lcP-94-YKg"/>
+                                            <outlet property="imageView" destination="ynr-u1-nmJ" id="v6H-II-Z94"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LTf-as-aAm" secondAttribute="bottom" id="1fy-Jf-BIA"/>
+                            <constraint firstItem="LTf-as-aAm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cin-4R-Agt"/>
+                            <constraint firstItem="LTf-as-aAm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mAZ-AF-nuQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LTf-as-aAm" secondAttribute="trailing" id="y4N-To-Cfg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="pinBoardCollectionView" destination="LTf-as-aAm" id="jql-z5-5hX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="50.724637681159422" y="20.758928571428569"/>
+        </scene>
+    </scenes>
+</document>
